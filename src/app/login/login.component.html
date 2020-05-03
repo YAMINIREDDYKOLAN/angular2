@@ -1,0 +1,26 @@
+
+
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .class{
+            color: rgb(123, 255, 0);
+            font-size: 35px;
+        }
+    </style>
+</head>
+<div align="center">
+    <b>EmpId:&nbsp;&nbsp;&nbsp;&nbsp;</b><input type="text" name="EmpId" [(ngModel)]="EmpId" class="form-group"  placeholder="Enter EmpId" ><br><br>
+    <!--<b>RoleId:&nbsp;&nbsp;&nbsp;&nbsp;</b><input type="text" name="RoleId" [(ngModel)]="RoleId" class="form-group"  placeholder="Enter RoleId" ><br><br>-->
+    <b>password: </b><input type="password" name="password" [(ngModel)]="password" class="form-group"  placeholder="Enter Password"/><br><br>
+    <input type="submit" value="submit" (click)="fetchEmployee()" class="btn btn-success"></div>
+
+<br>
+<div align="center" *ngIf="check1" align="center">
+    <h3>Please Enter Valid Details</h3>
+</div>
+<div align="center" *ngIf="check" align="center">
+    <h3>Login Success</h3>
+</div>
+

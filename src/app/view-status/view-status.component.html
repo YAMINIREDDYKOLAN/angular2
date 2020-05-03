@@ -1,0 +1,24 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .class{
+            color: rgb(145, 255, 0);
+            font-size: 35px;
+        }
+    </style>
+</head>
+<div class="row justify-content-center align-items-center h-100 a">
+    <input type="text" name="empId" [(ngModel)]="empId" placeholder="Enter Employee ID" class="form-group">    
+    <br>
+    <input type="button" value="fetch details" (click)="status()" class="btn btn-primary" class="form-group"/>
+</div>
+<br>
+
+<div *ngIf="check" align="center">
+        <h3>status : <span class="class">{{verification_details.status}}</span></h3>
+        
+</div>
+<!--<div align="center" *ngIf="check1" align="center">
+    <h3>Employee with ID : does not exist</h3>
+</div>-->
+
