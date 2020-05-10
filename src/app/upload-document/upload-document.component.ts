@@ -42,16 +42,6 @@ this.userfile=file;
   }
 }
 
-/*uploaddocument(){
-  if(this.doc.empId != 0 && this.doc.empName != "" &&this.doc.docData!=""){
-    console.log(this.empId+" "+this.empName+" file "+this.doc)
-    this.service.document(this.doc.empId,this.doc.empName);//.subscribe((data)=>this.message=data);
-     
-    
-}
-else{
-  this.message = "employee status was not set";
-}
-} */
+
 
 

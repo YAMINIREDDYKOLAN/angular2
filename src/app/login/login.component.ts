@@ -10,6 +10,7 @@ import { BackgroundService } from '../background.service';
 export class LoginComponent implements OnInit {
 
   EmpId:number;
+ 
   password:string;
 
   login_details:any;
@@ -18,6 +19,7 @@ export class LoginComponent implements OnInit {
   
   check:boolean = false;
   check1:boolean = false;
+ 
   empId:number;
  
   constructor(private service:BackgroundService,router:Router) { 
