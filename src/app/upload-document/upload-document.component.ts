@@ -14,6 +14,10 @@ export class UploadDocumentComponent implements OnInit {
   doc:EmployeeDocumentDto = new EmployeeDocumentDto(0,0,"","","");
    empId:number;
    empName:string;
+   docId:number;
+   docType:string;
+   docData:string;
+
    public userfile:any=File;
   private router:Router
   message:string;
@@ -24,7 +28,10 @@ export class UploadDocumentComponent implements OnInit {
   ngOnInit() {
     this.reactiveForm = new FormGroup({
       empId: new FormControl(),
-      empName: new FormControl()
+      empName: new FormControl(),
+      docId:new FormControl(),
+      docType:new FormControl(),
+      docData:new FormControl(),
     });
   }
   onSelectFile(event)

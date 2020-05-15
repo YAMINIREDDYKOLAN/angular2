@@ -50,17 +50,17 @@ export class BackgroundService {
   
   public getlogindetails(empId:number,password:String){
     
-    return this.http.get("http://localhost:8002/bgv/login/"+empId+"/"+password,{responseType: 'json'});
+    return this.http.get("http://localhost:8088/bgv/login/"+empId+"/"+password,{responseType: 'json'});
   
   }
   public saveEmployeeProfile(formdata:FormData):Observable<any>{
-
-    return this.http.post("http://localhost:8003/bgv/uploadFile",formdata);
+    
+    return this.http.post("http://localhost:8088/bgv/uploadFile",formdata);
   
   }
   public getstatus(empId:number){
     
-    return this.http.get("http://localhost:8004/bgv/checkStatus/"+empId,{responseType: 'json'});
+    return this.http.get("http://localhost:8088/bgv/checkStatus/"+empId,{responseType: 'text'});
   
   }
 

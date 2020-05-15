@@ -30,16 +30,25 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   fetchEmployee(){
-    this.service.getlogindetails(this.EmpId,this.password).subscribe((data)=>this.login_details=data);
-    if(this.login_details == null){
-      this.check1 = true;
-      this.check = false;
+    
+    this.service.getlogindetails(this.EmpId,this.password).subscribe((data:any)=>{this.login_details=data
+    console.log(data);
+   
+    if(this.login_details ==null){
+     
+      alert("unsucces");
+      this.check1=true;
+      this.check=false;
+    
     }
     else{
-      this.check1 = false;
-      this.check = true;
+      alert("success");
+      this.check1=false;
+      this.check=true;
+     
      
     }
+    });
   }
 
 }

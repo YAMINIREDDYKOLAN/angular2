@@ -29,7 +29,7 @@ export class ViewStatusComponent implements OnInit {
 
 
   status(){
-    this.service.getstatus(this.empId).subscribe((data)=>this.verification_details=data);
+    this.service.getstatus(this.empId).subscribe((data)=>this.verification_details=data)
     if(this.verification_details == null){
       this.check1 = true;
       this.check = false;
